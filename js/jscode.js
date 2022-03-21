@@ -1,3 +1,15 @@
+//Code to update age as it goes forward
+let d = new Date("March 1, 1994 00:00:00");
+let today = new Date();
+let dyear = today.getFullYear() - d.getFullYear();
+if(today.getMonth() < d.getMonth()) {
+  dyear--;
+}
+else if(today.getMonth() == d.getMonth() && today.getDate() < d.getDate()) {
+ dyear--;
+}
+document.getElementById("liveAge").innerHTML = dyear;
+
 
 function openModal() {
   document.getElementById('myModal').style.display = "block";
